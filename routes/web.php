@@ -19,3 +19,4 @@ Route::get('/', function () {
 });
 
 Route::get('/cars', [CarsController::class, 'getCars']);
+Route::get('/cars/{id}', [CarsController::class, 'getCar']);
