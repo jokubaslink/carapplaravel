@@ -18,5 +18,9 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/about', function() {
+    return view('about');
+});
+
 Route::get('/cars', [CarsController::class, 'getCars']);
 Route::get('/cars/{id}', [CarsController::class, 'getCar']);

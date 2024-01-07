@@ -17,27 +17,31 @@
 
 </head>
 
-<body class="max-w-[1400px] m-auto antialiased">
+<body class="max-w-[1400px] m-auto antialiased min-h-screen">
     <div class="w-full h-screen">
         <nav class="p-8 border-b-2 border-gray-800 flex items-center justify-between">
             <a href="/">
-                <h3>Car App</h3>
+                <h3 class="text-3xl font-medium">Car App</h3>
             </a>
-            <ul class="flex items-center justify-between">
-                <li>
+            <ul class="flex gap-4 text-lg font-light uppercase">
+                <li class="hover:border-b-2 hover:border-gray-200">
                     <a href="/about">About us</a>
                 </li>
-                <li>
+                <li class="hover:border-b-2 hover:border-gray-200">
                     <a href="/cars">Cars</a>
                 </li>
             </ul>
         </nav>
 
-     
 
-            @yield('content')
-       
 
+        @yield('content')
+
+
+
+        <footer class="fixed bottom-0 max-w-[1400px] w-full p-8 border-t-2 border-gray-800 flex items-center">
+            <p class="text-lg font-light w-full"> &#169; Car App </p>
+        </footer>
     </div>
 </body>
 
