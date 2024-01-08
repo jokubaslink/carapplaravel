@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CarsController;
+use App\Http\Controllers\RentController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,3 +25,5 @@ Route::get('/about', function() {
 
 Route::get('/cars', [CarsController::class, 'getCars']);
 Route::get('/cars/{id}', [CarsController::class, 'getCar']);
+Route::get('/cars/{id}/rent', [RentController::class, 'createModal'])->name('rent.show');
+Route::post('/cars/{id}/rented', [RentController::class, 'carRented'])->name('rent.rented');
