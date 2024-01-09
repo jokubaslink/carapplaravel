@@ -24,6 +24,6 @@ Route::get('/about', function() {
 });
 
 Route::get('/cars', [CarsController::class, 'getCars']);
-Route::get('/cars/{id}', [CarsController::class, 'getCar']);
-Route::get('/cars/{id}/rent', [RentController::class, 'createModal'])->name('rent.show');
-Route::post('/cars/{id}/rented', [RentController::class, 'carRented'])->name('rent.rented');
+Route::get('/cars/{id}', [CarsController::class, 'getCar'])->name('route.car');
+Route::get('/cars/{id}/rent', [CarsController::class, 'createModal'])->name('rent.car');
+Route::get('/cars/{id}/rented', [CarsController::class, 'carRented'])->name('rented.car');

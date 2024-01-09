@@ -84,7 +84,7 @@ class RentController extends Controller
                 'img' => asset('images/passatcc.jpg'),
                 'model' => "Passat CC",
                 'mark' => "Volkswagen",
-                ' year' => "2008",
+                'year' => "2008",
                 'doors' => "4/5",
                 'air' => "Yes",
                 'transmission' => "Automatic",

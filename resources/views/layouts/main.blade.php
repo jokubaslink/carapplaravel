@@ -18,7 +18,7 @@
 </head>
 
 <body class="max-w-[1400px] m-auto antialiased min-h-screen">
-    <div class="w-full h-screen">
+    <div class="w-full h-screen z-0">
         <nav class="p-8 border-b-2 border-gray-800 flex items-center justify-between">
             <a href="/">
                 <h3 class="text-3xl font-medium">Car App</h3>
@@ -32,16 +32,15 @@
                 </li>
             </ul>
         </nav>
-
-
+        {{-- Tarpas --}}
 
         @yield('content')
 
-
-
-        <footer class="fixed bottom-0 max-w-[1400px] w-full p-8 border-t-2 border-gray-800 flex items-center">
+        {{-- Tarpas --}}
+        <footer class=" fixed z-0 bottom-0 max-w-[1400px] w-full p-8 border-t-2 border-gray-800 flex items-center">
             <p class="text-lg font-light w-full"> &#169; Car App </p>
         </footer>
+        {{-- Pabaiga --}}
     </div>
 </body>
 
