@@ -1,23 +1,23 @@
 @extends('layouts.main')
 
 @section('content')
-    <div class="flex flex-col mt-24 p-20 justify-center gap-8 shadow-lg rounded-md">
-        <div class="flex w-full items-center justify-between">
-            <div class="flex flex-col gap-4 w-full">
-                <h2 class="text-5xl font-bold">{{ $car['name'] }}</h2>
-                <ul class="font-light text-2xl">
-                    <li>Year: {{ $car['year'] }}</li>
-                    <li>Transmission: {{ $car['transmission'] }}</li>
-                    <li>Fuel: {{ $car['fuel'] }}</li>
+    <div class="flex flex-col mt-6 md:mt-24 p-20 justify-center gap-8 shadow-lg rounded-md">
+        <div class="flex flex-col md:flex-row w-full items-center justify-between">
+            <div class="flex flex-col gap-6 items-center justify-center  mb-8 md:mb-0 w-full">
+                <h2 class="text-center md:text-start text-4xl sm:text-5xl lg:text-6xl font-bold">{{ $car['name'] }}</h2>
+                <ul class="font-light text-2xl lg:text-3xl">
+                    <li class="text-center md:text-start">Year: {{ $car['year'] }}</li>
+                    <li class="text-center md:text-start">Transmission: {{ $car['transmission'] }}</li>
+                    <li class="text-center md:text-start">Fuel: {{ $car['fuel'] }}</li>
                 </ul>
-                <h3 class="font-medium text-2xl ">Price: {{ $car['price'] }}$ / day</h3>
+                <h3 class="text-center font-medium text-2xl lg:text-3xl ">Price: {{ $car['price'] }}$ / day</h3>
 
                 @if(!$confirmation ?? false)
-                <a class="text-center bg-gray-200 text-lg font-md p-3 w-2/3" href="{{ route('rent.car', $car['id']) }}">Rent now</a>
+                <a class="text-center bg-gray-200 text-lg font-bold p-3 max-w-[200px] w-full" href="{{ route('rent.car', $car['id']) }}">Rent now</a>
                 @endif
             </div>
-            <div class="w-full">
-                <img src="{{ $car['img'] }}" alt="">
+            <div class="max-w-[400px] md:max-w-[600px] w-full">
+                <img class="w-full" src="{{ $car['img'] }}" alt="">
             </div>
         </div>
         @if ($confirmation ?? false)
