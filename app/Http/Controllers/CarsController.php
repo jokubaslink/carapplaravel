@@ -7,7 +7,8 @@ use Illuminate\Http\Request;
 class CarsController extends Controller
 {
 
-    public function getCarData(){
+    public function getCarData()
+    {
         $cars = [
             [
                 'id' => '1',
@@ -93,7 +94,8 @@ class CarsController extends Controller
         return $cars;
     }
 
-    public function findCar($id){
+    public function findCar($id)
+    {
         $cars = $this->getCarData();
 
         $carId = array_search($id, array_column($cars, 'id'));
@@ -116,18 +118,17 @@ class CarsController extends Controller
     {
         $car = $this->findCar($id);
 
-
-        return view('car', ['car' => $car, 'confirmation'=> false]);
+        return view('car', ['car' => $car, 'rentStatus' => false, 'confirmation' => false]);
     }
 
 
-    public function rentCarModal($id)
+    public function rentCar($id)
     {
         $clickedToRent = true;
 
         $car = $this->findCar($id);
 
-        return view('car', ['rentStatus' => $clickedToRent, 'car' => $car, 'confirmation'=> false]);
+        return view('car', ['rentStatus' => $clickedToRent, 'car' => $car]);
     }
 
     public function carRented($id)
@@ -136,8 +137,8 @@ class CarsController extends Controller
 
         $car = $this->findCar($id);
 
-        $confirmationMessage = 'Car rent request sent, you will receive a confirmation in email';
+        $confirmationMessage = 'Car rental request sent, you will receive a confirmation in email';
 
-        return view('car', ['rentStatus' => $clickedToRent, 'car' => $car, 'confirmation'=> $confirmationMessage]);
+        return view('car', ['rentStatus' => $clickedToRent, 'car' => $car, 'confirmation' => $confirmationMessage]);
     }
 }

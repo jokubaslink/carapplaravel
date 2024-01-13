@@ -24,24 +24,21 @@
                 <h3 class="md:text-start text-3xl font-medium">Car App</h3>
             </a>
             <ul class="flex gap-4 text-lg font-light uppercase">
-                <li class="hover:border-b-2 hover:border-gray-200">
+                <li class="hover:border-b-2 hover:border-yellow-600">
                     <a href="/about">About us</a>
                 </li>
-                <li class="hover:border-b-2 hover:border-gray-200">
+                <li class="hover:border-b-2 hover:border-yellow-600">
                     <a href="/cars">Cars</a>
                 </li>
             </ul>
         </nav>
-        {{-- Tarpas --}}
 
         @yield('content')
 
-
-        {{-- Tarpas --}}
-        {{--         <footer class="bg-white fixed z-0 bottom-0 top-1/4 max-w-[1400px] w-full p-8 border-t-2 border-gray-800 flex items-center">
+        <footer class="bg-white  max-w-[1400px] w-full p-8 border-t-2 border-gray-800 flex items-center">
             <p class="text-lg font-light w-full"> &#169; Car App </p>
-        </footer> --}}
-        {{-- Pabaiga --}}
+        </footer>
+
     </div>
 </body>
 
